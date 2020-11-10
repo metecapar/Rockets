@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+  <%-include("../partials/adminHeader") %>
+  <!-- Sol menü -->
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-3">
+        <%-include("../partials/adminNavBar") %>
+      </div>
+      <div class="col-md-9">
+        <h2>Duyurular ve Galeri Kontrolü </h2>
+
+        <!-- Reklam  ekleme formu -->
+        <form action="/reklam-ekle" method="post" enctype="multipart/form-data">
+          <h4> Reklam Bölümü</h4>
+          <div class="form-group">
+            <label> Sitenize buradan istediğin firmanın fotoğrafını ekleyebilirsiniz!</label><br>
+            <span>Gözat</span>
+            <input type="file" name="reklam" accept=".jpg,.png" class="form-control">
+          </div>
+          <button id="admin-image-add-button" type="submit" class="btn btn-danger"> Reklam Ekle </button>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+
+</html>

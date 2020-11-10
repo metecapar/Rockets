@@ -1,0 +1,86 @@
+
+
+
+body{
+    background: #eee;
+}
+span{
+    font-size:15px;
+}
+a{
+  text-decoration:none;
+  color: #0062cc;
+
+}
+.col-lg-4 i {
+  font-size: 36px;
+  padding-top: 5px;
+  margin : 5px;
+}
+.col-lg-4 .fa-twitter,.fa-facebook-square{
+  color: blue;
+}
+.col-lg-4 .fa-instagram{
+  color: orange;
+}
+.box{
+    padding:60px 0px;
+    margin-top: 5rem;
+}
+
+.box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.text{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#4183D7;
+}
+.navbar {
+  background: (0,0,0,0.5);
+  position: relative;
+  display: flex;
+  padding: 0.5rem 2.5rem;
+}
+.navbar-brand{
+  width: 60px;
+  height: 60px;
+}
+.dropbtn {
+  color: #00000080;;
+  padding-top: 7px;
+  font-size: 17px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:  #7dcea0 ;}

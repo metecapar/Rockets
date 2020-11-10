@@ -1,0 +1,332 @@
+
+                      /* Oğuzhan Bayrak Css dosyası */
+body {
+  margin: 0;
+  font-family: Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff; }
+
+.navbar {
+  background: (0,0,0,0.5);
+  position: relative;
+  display: flex;
+  padding: 0.5rem 2.5rem;
+}
+.navbar-brand{
+  width: 60px;
+  height: 60px;
+}
+.dropbtn {
+  color: #00000080;;
+  padding-top: 7px;
+  font-size: 17px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:  #7dcea0 ;}
+
+.uyeOlContainer{
+  height: 100%;
+  align-content: center;
+}
+.d-flex {
+  margin-top: 70px;
+}
+.social_icon{
+  position: absolute;
+right: 20px;
+top: -45px;
+}
+#uye-giris{
+height: 350px;
+margin-top: 4rem;
+margin-bottom: auto;
+width: 350px;
+}
+.halisaha-cards{
+  margin-top: 2.6rem;
+  margin-bottom : 2.5rem;
+}
+.halisaha-cards img{
+  height: 230px;
+}
+.halisaha-cards .card-title{
+    margin-top: 25px;
+}
+.halisaha-cards .card-body{
+  text-align: center;
+}
+.halisaha-cards a{
+
+margin: 20px 0 20px 0;
+
+}
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+.social_icon span:hover{
+color: black;
+cursor: pointer;
+}
+.input-group-prepend{
+text-align: center;
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+.login_btn{
+float: right;
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+.jumbotron {
+
+  text-align: center;
+}
+.jumbotron .fas{
+  margin: 20px;
+}
+.jumbotron .display-5 {
+      font-size: 3.3rem;
+}
+.card-kayıtOl{
+   border-radius: 1rem;
+   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.6);
+}
+.card-kayıtOl .card-title{
+  margin-top: 27px;
+}
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+.form-label-group{
+    padding-left: 1.4rem;
+
+}
+.form-label-group input {
+  width: 95%;
+  height: auto;
+  border-radius: 3rem;
+}
+.card-kayıtOl .btn-primary{
+  margin-top: 2rem;
+  width: 95%;
+}
+.btn-google {
+  width: 95%;
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+    width: 95%;
+  color: white;
+  background-color: #3b5998;
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  height:150px;
+  margin-top: 50px;
+}
+
+div.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+}
+
+div.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.5;
+}
+
+div.masthead .page-heading {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 200px 0 150px;
+  color: white;
+}
+div.masthead .admin-baslik {
+  font-size: 3.5rem;
+}
+/*Admin Dashboard Cssleri */
+.page-content h2,h4 {
+  text-align: center;
+  color:  #900C3F ;
+}
+.page-content .table {
+  margin-top: 2.5rem;
+}
+.page-content .table th{
+  color:  #900C3F ;
+}
+.page-content .table td {
+  color:  black ;
+}
+.page-content .table .randevuSaati {
+  color:  #8F8F8F ;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.sidebar .navbar{
+  padding: 2.5rem;
+  margin-top: 5rem;
+    text-align: center;
+}
+.sidebar .navbar li{
+
+   margin-bottom: 2px;
+   border : 2px solid  black;
+   border-radius: 2rem;
+}
+.content-container {
+    background-color:#fff;
+    padding:35px 20px;
+    margin-bottom:20px;
+}
+/*  Şikayet ve Öneriler Css */
+h1.content-title{
+    font-size:32px;
+    font-weight:300;
+    text-align:center;
+    margin-top:0;
+    margin-bottom:20px;
+    font-family: 'Open Sans', sans-serif!important;
+}
+ul.mail-list{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+ul.mail-list li a{
+    display:block;
+    border-bottom:1px dotted #CFCFCF;
+    padding:20px;
+    text-decoration:none;
+}
+ul.mail-list li:last-child a{
+    border-bottom:none;
+}
+ul.mail-list li a:hover{
+    background-color:#DBF9FF;
+}
+ul.mail-list li span{
+    display:block;
+}
+ul.mail-list li span.mail-sender{
+    font-weight:600;
+    color:#8F8F8F;
+}
+ul.mail-list li span.mail-subject{
+    color:#8C8C8C;
+}
+ul.mail-list li span.mail-message-preview{
+    display:block;
+    color:#A8A8A8;
+}
+/*  İletişim Bilgilerini Güncelle Css */
+.page-content form {
+  margin-top: 5rem;
+}
+.page-content form .form-group{
+  padding : 1.2rem;
+}
+.page-content form .form-group label{
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.page-content form .form-group label i{
+  margin-left: 1.5rem;
+}
+.page-content form .form-group input{
+  border-radius: 2rem;
+  width: 80%;
+}
+.page-content form  .btn{
+  margin: 2rem;
+  border-radius: 5rem;
+  float: right;
+  margin-right: 14rem;
+}
+tr:nth-child(even) {
+  background-color: orange;
+  color: black;
+}
+#success-message {
+  display: none;
+}
+#error-message {
+  display: none;
+}
+
+#Mytable {
+  margin-top: 3.5rem;
+}
+#randevuSeciniz{
+  text-align: center;
+}
+.sikayet-btn {
+  width: 4rem;
+  height: 2.2rem;
+  float: right;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+#duyurular-1{
+    font-size: 1.7rem;
+    font-style: italic;
+}
+#duyurular-2 {
+  font-size: 1.4rem;
+  font-style: italic;
+}

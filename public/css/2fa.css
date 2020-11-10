@@ -1,0 +1,22 @@
+.jumbotron.text-center {
+    height: 17em;
+}
+
+input.form-control.col-md-6 {
+    width: 50%;
+    margin-right: 1em;
+    display: inline;
+}
+
+div#notes {
+    margin-top: 7%;
+    width: 98%;
+    margin-left: 1%;
+}
+
+@media (min-width: 991px) {
+	.col-md-9.col-sm-12 {
+        margin-top: 3%;
+    	margin-left: 12%;
+	}
+}

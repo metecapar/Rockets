@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kayıtlı Randevular</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/muco.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<%-include("partials/header") %>
+
+<body>
+  <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <form class="okan-form">
+              <div class="form-header">
+                <h2>Randevunuzu İptal Ediniz</h2>
+                <p>Lütfen Aşağıda Bulunan Kayıtlı Randevularınızdan İptal Etmek İstediğinizi Seçiniz.</p>
+              </div>
+              <table class="table table-hover" align="center">
+                <thead>
+                  <tr>
+                    <th>Gelecek Randevularınız</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%rows.forEach(function(items,index){ %>
+                  <tr>
+                    <%if(Date.parse(items.RandevuTarihi) > items.bugun){%>
+                    <td><%=items.r_gun%></td>
+                    <td id="saat" value="<%=items.r_saat%>"><%=items.r_saat%></td>
+                    <td><%=items.halisaha_secimi%></td>
+                    <td><a id="<%=items.RandevuTarihi%>" value="<%=items.halisaha_secimi%>" name="iptal-et" class="btn-sm btn-danger" contextmenu="<%=items.r_saat%>">İptal Et</a>
+                      <%}%>
+                  </tr>
+                  <%  })%>
+                </tbody>
+              </table>
+              <br><br><br><br>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<%-include("partials/footer") %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/randevu-iptal.js" charset="utf-8"></script>
+
+</html>

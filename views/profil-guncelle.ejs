@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/muco.css">
+</head>
+
+<%-include("partials/header") %>
+
+<body>
+  <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <form action="/profil-guncelle" method="POST">
+              <div class="form-header">
+                <h1>Profil güncelle</h1>
+              </div>
+              <!-- GÜNCELLEME FORMU -->
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label class="form-label">İsim </label>
+                  <input class="form-control" type="text" placeholder="İsim giriniz" name="isim">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label class="form-label">Soyisim: </label>
+                  <input class="form-control" type="text" placeholder="Soyisim giriniz" name="soyisim">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label class="form-label">Kullanıcı adı:</label>
+                  <input class="form-control" type="kullaniciAdi" placeholder="Değiştirmek istediğiniz nicki giriniz" name="nick">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label class="form-label">Yeni şifre :</label>
+                  <input class="form-control" type="password" placeholder="Yeni şifrenizi Giriniz!" name="yeni_sifre">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-8">
+                    <input class="btn btn-primary" value="Değişiklikleri Kaydet" type="submit">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-10">
+                    <input class="btn btn-default" value="İptal" type="reset">
+                  </div>
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  <br></br>
+
+  <body>
+    <%-include("partials/footer") %>
+
+</html>

@@ -1,0 +1,175 @@
+.testimonial-box img {
+    display: inline-block;
+    font-size: 25%;
+    width: 90px;
+    height:90px;
+    margin-top: 25%;
+    border-radius: 50%;
+
+}
+.testimonial-box h4 {
+    color: #fe4819;
+}
+.testimonial-box p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 400;
+}
+.ratings-icons {
+    font-size: 250%;
+    margin-top: 5%;
+    color: #fec42d;
+    margin-bottom: 15px;
+}
+#avatar
+{
+    font-size: 120px;
+    margin-bottom: 15px ;
+    margin-top: 40px;
+}
+.navbar {
+    background: (0,0,0,0.5);
+    position: relative;
+    display: flex;
+    padding: 0.5rem 2.5rem;
+  }
+  .navbar-brand{
+    width: 60px;
+    height: 60px;
+  }
+
+  .dropbtn {
+    color: #00000080;;
+    padding-top: 7px;
+    font-size: 17px;
+    border: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color:  #7dcea0 ;}
+
+
+/* Styling h1 and links
+––––––––––––––––––––––––––––––––– */
+
+
+
+
+.starrating > input {display: none;}  /* Remove radio buttons */
+
+.starrating > label:before {
+  content: "\f005"; /* Star */
+  margin: 2px;
+  font-size: 4em;
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+.starrating > label
+{
+  color: #222222; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: #ffca08 ; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #ffca08 ;  } /* Set yellow color when star hover */
+
+/*
+    Image credits:
+    uifaces.com (http://uifaces.com/authorized)
+*/
+
+#login { display: none; }
+.page-header { position: relative; }
+.reviews {
+    color: #555;
+    font-weight: bold;
+    margin: 10px auto 20px;
+}
+.notes {
+    color: #999;
+    font-size: 12px;
+}
+.media .media-object { max-width: 120px; }
+.media-body { position: relative; }
+.media-date {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+.media-date li { padding: 0; }
+.media-date li:first-child:before { content: ''; }
+.media-date li:before {
+    content: '.';
+    margin-left: -2px;
+    margin-right: 2px;
+}
+.media-comment { margin-bottom: 20px; }
+.media-replied { margin: 0 0 20px 50px; }
+.media-replied .media-heading { padding-left: 6px; }
+
+.btn-circle {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+.btn-circle span { padding-right: 6px; }
+.embed-responsive { margin-bottom: 20px; }
+.tab-content {
+    padding: 20px 15px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.form-control {
+    height: 100px;
+    Width: 1000px;
+}
+.form-group {
+    margin-left: 5rem;
+}
+.form-group .btn{
+    align-items: center;
+}
+.kucukyazi{
+    color: #586266;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 12px;
+}
+.text-center{
+  margin-top: 5rem;
+  text-align: center;
+}
+ h1{
+  color: #fe4819;
+}

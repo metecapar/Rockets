@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Uye Ol</title>
+</head>
+<%- include("partials/header") %>
+
+<body>
+  <div class="container" class="uyeOlContainer">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h3>Giris Yap</h3>
+          <div class="d-flex justify-content-end social_icon">
+
+            <!-- <a href="/face-kayit"> <span><i class="fab fa-facebook-square"></i></span></a> -->
+            <!-- <a href="/google-kayit"> <span><i class="fab fa-google-plus-square"></i></span></a> -->
+            <a href="/google"> <span><i class="fab fa-google-plus-square"></i></span></a>
+
+            <fb:login-button scope="public_profile,email,user_birthday" onlogin="checkLoginState();">
+            </fb:login-button>
+
+
+          </div>
+        </div>
+        <div class="card-body" id="uye-giris">
+          <!-- <form id="uye-giris-form" action="uye-giris" method="post">  -->
+          <form id="uye-giris-form">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" id="Email" name="uye_email" placeholder="email" required>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" id="Sifre" name="uye_sifre" placeholder="sifre" required>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Giris" class="btn login_btn" id="uye-giris-button">
+            </div>
+            <a href="/kayit-ol" class="btn btn-primary">Kayıt Ol</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+<script src="js/uye-giris-ajax.js" charset="utf-8"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '1417211421774376',
+      cookie: true,
+      xfbml: true,
+      version: 'v5.0'
+    });
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      console.log("Giriş yapıldı");
+    } else {
+      console.log("Not auth!");
+    }
+  }
+
+  function setElements(isLoggedIn) {
+    if (isLoggedIn) {
+      console.log(document.getElementById('profile'));
+
+      console.log(document.getElementById('fb-btn'));
+    }
+  }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Giris</title>
+  <%-include("partials/header") %>
+</head>
+
+<body>
+  <div class="container" class="uyeOlContainer">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h3 style="text-align : center">Admin Giriş Yap</h3>
+        </div>
+        <div class="card-body" id="uye-giris">
+          <form id="admin-form-giris">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" id="admin-email" name="email" placeholder="email">
+
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" id="admin-sifre" name="sifre" placeholder="sifre">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Giriş" class="btn login_btn" id="admin-giris-button">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/admin/admin-giris.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</html>

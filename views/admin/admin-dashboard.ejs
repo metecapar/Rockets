@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+  <%-include("../partials/adminHeader") %>
+  <!-- Sol menü -->
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-3">
+        <%-include("../partials/adminNavBar") %>
+      </div>
+      <div class="col-md-9">
+        <h2>Randevuları Görüntüle</h2>
+
+        <div class="row">
+
+          <div id="randevuSeciniz" class="form-group">
+            <span class="form-label">Randevu Tarihi</span>
+            <input class="form-control" type="date" id="randevuGunu" required>
+          </div>
+
+        </div>
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Randevu Tarihi</th>
+              <th scope="col">Randevu Oluşturan Email</th>
+              <th scope="col">Saat</th>
+              <th scope="col">Halısaha Seçimi</th>
+              <th scope="col">Ödeme Şekli</th>
+              <th scope="col">Video İsteği?</th>
+              <th scope="col">Hakem İsteği?</th>
+              <th scope="col">Servis İsteği?</th>
+              <!-- <th scope="col">Eksik oyuncuları var mı?</th> -->
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="js/main.js">
+</script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/admin/goruntule.js" charset="utf-8"></script>
+
+</html>

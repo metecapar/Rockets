@@ -1,0 +1,30 @@
+/*ANA ILETISIM*/
+.anailetisim {
+  background: orange;
+  border-top: 6px solid #87b50d;
+  padding: 70px 0 0px 0;
+  color:#fff;
+}
+.anailetisim h2 {
+  font:300 30px 'Raleway',sans-serif;
+}
+.anailetisim .iletisimform input{
+  color:#795548;
+  font:300 16px 'Raleway',sans-serif;
+  padding:12px 18px;
+  border-radius: 8px;
+}
+.anailetisim .iletisimform select {
+  background: #fff url('../resimler/selectbg.png') right 4px center no-repeat;
+  color:#ccc;
+  font:300 16px 'Raleway',sans-serif;
+  padding:12px 18px;
+  border-radius: 8px;
+  -webkit-appearance: inherit;
+}
+.anailetisim .iletisimbilgi table td {
+  vertical-align:top;
+  color:#fff;
+   font-weight:300;
+   padding:0 12px 40px 12px;
+  }

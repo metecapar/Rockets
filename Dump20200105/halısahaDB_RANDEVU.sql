@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 5.7.28, for Linux (x86_64)
+--
+-- Host: localhost    Database: halısahaDB
+-- ------------------------------------------------------
+-- Server version	5.7.28-0ubuntu0.18.04.4
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `RANDEVU`
+--
+
+DROP TABLE IF EXISTS `RANDEVU`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `RANDEVU` (
+  `r_id` int(11) NOT NULL AUTO_INCREMENT,
+  `uye_email` varchar(75) CHARACTER SET utf8 DEFAULT NULL,
+  `r_gun` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
+  `r_saat` int(11) DEFAULT NULL,
+  `halisaha_secimi` varchar(45) COLLATE utf8_latvian_ci DEFAULT NULL,
+  `r_servis` varchar(10) COLLATE utf8_latvian_ci DEFAULT NULL,
+  `r_video` varchar(10) COLLATE utf8_latvian_ci DEFAULT NULL,
+  `r_hakem` varchar(10) COLLATE utf8_latvian_ci DEFAULT NULL,
+  `r_odeme` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`r_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_latvian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `RANDEVU`
+--
+
+LOCK TABLES `RANDEVU` WRITE;
+/*!40000 ALTER TABLE `RANDEVU` DISABLE KEYS */;
+INSERT INTO `RANDEVU` VALUES (1,'selinbusra@gmail.com','2019-12-12',10,'KAPALI','HAYIR','HAYIR','HAYIR','NAKİT'),(71,'bayrakogzhn@gmail.com','2020-01-01',22,'KAPALI','EVET','EVET','EVET','NAKİT'),(82,'bayrakogzhn@gmail.com','2020-01-04',22,'ISITMALI','EVET','HAYIR','HAYIR','NAKİT'),(83,'test@gmail.com','2020-01-02',23,'ACIK','HAYIR','EVET','EVET','HALISAHADA KREDİ KARTI'),(84,'','2020-01-15',12,'KAPALI','EVET','EVET','EVET','NAKİT'),(85,'Oguzhan Bayrak','2020-01-24',12,'ISITMALI','EVET','EVET','EVET','NAKİT'),(86,'Mete Çapar','2020-01-30',20,'ISITMALI','HAYIR','HAYIR','HAYIR','NAKİT'),(87,'bayrakogzhn@gmail.com','2020-01-30',13,'ISITMALI','EVET','EVET','EVET','HALISAHADA KREDİ KARTI');
+/*!40000 ALTER TABLE `RANDEVU` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-01-05 20:39:25

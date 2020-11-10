@@ -1,0 +1,78 @@
+<!-- fontAwesome CDN -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<header role="banner">
+  <div class="container-fluid">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" id="logo" href="/"><img class="img-thumbnail" src="images/logo.png" alt="rockets"></a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ml-auto">
+          <% if(currentUser) { %>
+          <!-- dropdown-menümüz -->
+          <div class="dropdown">
+            <li class="dropbtn">Randevu İslemleri</li>
+            <div class="dropdown-content">
+              <li class="nav-item">
+                <a class="nav-link" href="/randevual">Randevu Al</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kayitli-randevular">Kayıtlı Randevular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/randevu-guncelle">Randevu Güncelle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/randevu-iptal">Randevu İptal</a>
+              </li>
+            </div>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/halisaha-doluluk">Halısaha Doluluğu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/halisaha-degerlendirme">Halısaha Değerlendir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profil-guncelle">Profil Güncelle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cikis-yap">Çıkış Yap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profil-guncelle"><%=currentUser%></a>
+          </li>
+          <%}else {%>
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/kayit-ol">Kayıt Ol</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/uye-giris">Giriş Yap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/galeri">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sosyalmedya">Sosyal Medya Hesaplarimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/iletisim">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin-giris"><i class="fas fa-user-shield"></i></a>
+          </li>
+
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

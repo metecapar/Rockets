@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+  <%-include("../partials/adminHeader") %>
+  <!-- Sol menü -->
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-3">
+        <%-include("../partials/adminNavBar") %>
+      </div>
+      <div class="col-md-9">
+        <h2>Şifre Değiştir</h2>
+        <form action="/SifreDegistir" method="post">
+          <div class="form-group">
+            <label> Lütfen Mevcut Şifrenizi Giriniz <i class="fas fa-unlock"></i> </label>
+            <input style="margin-top:3rem;" name="yeniSifre" type="password" class="form-control" placeholder="Yeni Şifre giriniz">
+          </div>
+          <button id="admin-sifre-degistir" type="submit" class="btn btn-danger"> Şifre Güncelle </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+
+</html>

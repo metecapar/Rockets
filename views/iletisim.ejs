@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/iletisim.css">
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>İletişim</title>
+</head>
+<%- include("partials/header") %>
+
+<body>
+  <div class="anailetisim container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="iletisimform">
+            <div class="mbottom">
+              <h2> Şikayet ve önerilerinizi bekleriz </h2>
+              <p> Soru, görüş ve önerileriniz için bilgilerinizi bırakın biz sizi arayalım. </p>
+            </div>
+            <form action="/iletisim" method="post">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control input-lg" name="isim" placeholder="Adınız" id="isim" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control input-lg" name="soyisim" placeholder="Soyadınız" id="soyisim" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="email" placeholder="E-Posta Adresiniz" name="email" class="form-control input-lg" id="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="phone" placeholder="Telefon" required="" name="telefon" class="form-control input-lg" id="telefon" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea class="form-control" rows="8" cols="80" name="mesaj" placeholder="Mesajınız" id="mesaj" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-gonder2 btn-lg" id="btn-sikayet" name="gonder">FORMU GÖNDER</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-1 text-center aralik1 hidden-xs">
+          <img class="img-responsive" src="http://erkankaratas.com.tr/wp-content/themes/drerkan/resimler/aralik1.png" alt="">
+        </div>
+        <div class="col-md-5 iletisimbilgi">
+          <h2> İletişim Bilgilerimiz </h2>
+          <table class="mtop">
+            <tbody>
+              <%rows.forEach(function(items){ %>
+              <br>
+              <tr>
+                <td><strong> Adres </strong></td>
+                <td><%=items.Adres%><br></td>
+              </tr>
+              <tr>
+                <td><strong> Telefon: </strong></td>
+                <td><%=items.telefon%><br></td>
+              </tr>
+              <%})%>
+
+              <tr>
+                <td><strong>E-Mail: </strong></td>
+                <td>halisaha@halisaha<br>halisaha@halisaha</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.328256446046!2d30.524136215319178!3d37.82920047974962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5c9d7c97eac19%3A0x2ab3b1160239db2a!2sS%C3%BCleyman%20Demirel%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1575209820702!5m2!1str!2str"
+        width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</body>
+<%- include("partials/footer") %>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</html>

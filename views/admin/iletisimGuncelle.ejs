@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+  <%-include("../partials/adminHeader") %>
+  <!-- Sol menü -->
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-3">
+        <%-include("../partials/adminNavBar") %>
+      </div>
+      <div class="col-md-9">
+        <h2>İletişim Bilgilerini Güncelle</h2>
+        <form action="/iletisimGuncelle" method="post">
+          <div class="form-group" class="iletisim-güncelle">
+            <label> Telefon <i class="fas fa-phone"></i> </label>
+            <input type="text" class="form-control" name="telefon" placeholder="Telefon Numarasını Güncelle" required>
+          </div>
+          <div class="form-group">
+            <label> Adres Bilgileri <i class="fas fa-ad"></i> </label>
+            <input type="text" class="form-control" name="adres" placeholder="Adres Bilgilerini Güncelle" required>
+          </div>
+          <button id="admin-iletisim-güncelle-button" type="submit" class="btn btn-danger"> Güncelle </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+
+</html>

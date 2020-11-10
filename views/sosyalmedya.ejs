@@ -1,0 +1,74 @@
+<html lang="tr">
+
+<head>
+  <title>Sosyal Medya Hesaplari</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/sosyalmedya.css">
+
+</head>
+
+<%- include("partials/header") %>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <i class="fab fa-twitter"></i>
+          <div class="title">
+            <h4>Twitter</h4>
+          </div>
+          <div class="text">
+            <span>Twitter hesabımıza Ulaşmak için</span>
+          </div>
+          <a href="https://twitter.com">Tıklayınız</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <i class="fab fa-instagram"></i>
+          <div class="title">
+            <h4>Instagram</h4>
+          </div>
+          <div class="text">
+            <span>Instagram hesabımıza Ulaşmak için</span>
+          </div>
+          <a href="https://www.instagram.com/">Tıklayınız</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="box-part text-center">
+          <i class="fab fa-facebook-square"></i>
+          <div class="title">
+            <h4>Facebook</h4>
+          </div>
+          <div class="text">
+            <span>Facebook hesabımıza Ulaşmak için</span>
+          </div>
+          <a href="https://www.facebook.com/">Tıklayınız</a>
+        </div>
+      </div>
+    </div>
+    <!--Reklam Banner-->
+
+    <div class="row">
+      <%rows.forEach(function(items){%>
+
+      <div class="col-lg-4">
+        <img style="width:300px; height : 300px; margin :2rem;" class="img-fluid img-thumbnail" src="reklam/<%=items.reklam_filename%>" alt="<%=items.reklam_filename%>">
+      </div>
+      <%})%>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

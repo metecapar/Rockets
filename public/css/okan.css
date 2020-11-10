@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+table.table {
+    border-collapse: collapse;
+    width: 350px;
+
+  }
+  td {
+    border: 1px solid green;
+    text-align: left;
+    padding: 7px;
+  }
+  th{
+    border: 1px solid green;
+    text-align: center;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: yellow;
+    color: black;
+  }
+  p{
+      color: green
+}

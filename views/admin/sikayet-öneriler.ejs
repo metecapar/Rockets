@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!--font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Ozel css dosyamız -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+  <%-include("../partials/adminHeader") %>
+  <!-- Sol menü -->
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-3">
+        <%-include("../partials/adminNavBar") %>
+      </div>
+      <div class="col-md-9">
+        <h2>Sikayet Öneriler</h2>
+
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="inbox">
+            <div class="container">
+              <div class="content-container clearfix">
+                <div class="col-md-12">
+                  <ul class="mail-list">
+                    <%rows.forEach(function(items,index){%>
+                    <li>
+                      <div class="container">
+                        <span class="mail-sender"><%=items.Sikayetci_adi%> <%=items.Sikayetci_soyadi%></span>
+                        <span class="mail-subject"><%=items.Sikayetci_email%></span>
+                        <span class="mail-message-preview"><%=items.Sikayetci_mesaj%></span>
+                        <span id="button" value="<%=items.Sikayetler_id%>" class="btn-sm btn-danger sikayet-btn">Sil</span>
+                      </div>
+                    </li>
+                    <br><br>
+                    <hr>
+                    <%})%>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript" src="js/main.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/admin/sikayetler.js" charset="utf-8"></script>
+
+
+</html>

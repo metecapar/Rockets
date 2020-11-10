@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- fontAwesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Kayıt Ol!</title>
+
+</head>
+<%- include("partials/header") %>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-5 mx-auto">
+        <div class="card card-kayıtOl my-5">
+          <div class="card-body">
+            <h4 class="card-title text-center">Kayıt Ol</h4>
+            <form class="form-signin" action="/kayit-ol" method="POST">
+              <div class="form-label-group">
+                <label><i class="fas fa-address-card"></i></label>
+                <input type="text" name="k_adi" class="form-control" placeholder="Kullanici adınız">
+              </div>
+              <div class="form-label-group">
+                <label><i class="fas fa-ad"></i></label>
+                <input type="text" name="isim" class="form-control" placeholder="Adınızı bağışlayın lütfen">
+              </div>
+              <div class="form-label-group">
+                <label><i class="fas fa-signature"></i></label>
+                <input type="text" name="soyisim" class="form-control" placeholder="Soyisminiz?">
+              </div>
+              <div class="form-label-group">
+                <label><i class="fas fa-phone"></i></label>
+                <input type="text" name="telefon" class="form-control" placeholder="Telefon numaranız?">
+              </div>
+              <div class="form-label-group">
+                <label><i class="fas fa-envelope-open-text"></i></label>
+                <input type="email" name="email" class="form-control" placeholder="Email adresinizi giriniz" required autofocus>
+              </div>
+              <div class="form-label-group">
+                <label><i class="fas fa-unlock"></i></label>
+                <input type="password" id="inputPassword" name="sifre" class="form-control" placeholder="Son istek,Şifre lütfen" required>
+                <button class="btn btn-lg btn-primary btn-block  text-uppercase" id="kayit-ol-button" type="submit">Kayıt Olabiliriz</button>
+                <hr class="my-4">
+                <a href="/google" class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>Google'la giriş</a>
+                <a href="/face-kayit" class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>Facebook ile giriş</a><br>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<%- include("partials/footer") %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="bootstrap/js/jquery.min.js" charset="utf-8"></script>
+<script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/main.js" charset="utf-8"></script>
+
+</html>
